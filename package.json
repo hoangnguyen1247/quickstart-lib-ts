@@ -1,0 +1,29 @@
+{
+    "name": "quickstart-lib-ts",
+    "version": "0.0.1",
+    "description": "Quickstart lib ts",
+    "main": "lib/index.js",
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {
+        "@babel/cli": "^7.10.3",
+        "@babel/core": "^7.10.3",
+        "@babel/preset-env": "^7.10.3",
+        "@babel/preset-typescript": "^7.10.1",
+        "@types/chai": "^4.2.11",
+        "@types/mocha": "^7.0.2",
+        "@types/node": "^12.7.4",
+        "babel-plugin-module-resolver": "^4.0.0",
+        "chai": "^4.2.0",
+        "cross-env": "^7.0.2",
+        "mocha": "^8.0.1",
+        "typescript": "^3.9.5"
+    },
+    "scripts": {
+        "type-check": "tsc --noEmit",
+        "type-check:watch": "npm run type-check -- --watch",
+        "build": "cross-env NODE_PATH=. npm run build:types && npm run build:js",
+        "build:types": "tsc --emitDeclarationOnly",
+        "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline"
+    }
+}
