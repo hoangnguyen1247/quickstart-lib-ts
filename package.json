@@ -23,12 +23,13 @@
         "typescript": "^3.9.5"
     },
     "scripts": {
-        "type-check": "tsc --noEmit",
+        "type-check": "cross-env NODE_PATH=. tsc --noEmit",
         "type-check:watch": "npm run type-check -- --watch",
         "build": "cross-env NODE_PATH=. npm run build:types && npm run build:js",
         "build:types": "tsc --emitDeclarationOnly",
         "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps false --presets minify",
         "build:js:sourcemap": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
-        "test": "cross-env NODE_PATH=. ts-mocha test/test.ts --timeout=60000 --exit"
+        "test:mocha": "cross-env NODE_PATH=. ts-mocha test/test.ts --timeout=60000 --exit",
+        "test": "npm run type-check && npm run test:mocha"
     }
 }
