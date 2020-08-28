@@ -8,8 +8,10 @@
     "devDependencies": {
         "@babel/cli": "^7.10.3",
         "@babel/core": "^7.10.3",
+        "@babel/plugin-transform-runtime": "^7.11.0",
         "@babel/preset-env": "^7.10.3",
         "@babel/preset-typescript": "^7.10.1",
+        "@babel/runtime": "^7.11.2",
         "@types/chai": "^4.2.11",
         "@types/mocha": "^7.0.2",
         "@types/node": "^12.7.4",
@@ -32,6 +34,7 @@
         "build": "npm run clean:build && npm run eslint && cross-env NODE_PATH=. npm run build:types && npm run build:js",
         "build:types": "tsc --emitDeclarationOnly",
         "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --ignore '**/*.test.ts' --source-maps false --presets minify",
+        "build:js2": "babel src --out-dir lib --extensions \".ts,.tsx\" --ignore '**/*.test.ts' --source-maps false",
         "build:js:sourcemap": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
         "eslint": "node_modules/.bin/eslint src/** --fix",
         "test:mocha": "cross-env NODE_PATH=. ts-mocha test/test.ts --timeout=60000 --exit",

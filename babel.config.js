@@ -10,7 +10,7 @@ module.exports = {
     "plugins": [
         "@babel/proposal-class-properties",
         "@babel/proposal-object-rest-spread",
-        "@babel/plugin-transform-async-to-generator",
+        "@babel/plugin-transform-runtime",
         ["module-resolver", {
             "root": ["."],
             "extensions": [
