@@ -1,6 +1,4 @@
-'use strict';
-
-var libMain = require('./lib');
+const libMain = require('./lib');
 
 module.exports = {
     libMain,
