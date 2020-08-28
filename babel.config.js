@@ -1,4 +1,4 @@
-module.exports = {    
+module.exports = {
     "ignore": [
         "node_modules",
         "build"
@@ -10,6 +10,7 @@ module.exports = {
     "plugins": [
         "@babel/proposal-class-properties",
         "@babel/proposal-object-rest-spread",
+        "@babel/plugin-transform-async-to-generator",
         ["module-resolver", {
             "root": ["."],
             "extensions": [
