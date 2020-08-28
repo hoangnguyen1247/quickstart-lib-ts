@@ -16,8 +16,10 @@
         "babel-plugin-module-resolver": "^4.0.0",
         "babel-preset-minify": "^0.5.1",
         "chai": "^4.2.0",
+        "chai-as-promised": "^7.1.1",
         "cross-env": "^7.0.2",
         "mocha": "^8.1.2",
+        "ts-mocha": "^7.0.0",
         "typescript": "^3.9.5"
     },
     "scripts": {
@@ -26,6 +28,7 @@
         "build": "cross-env NODE_PATH=. npm run build:types && npm run build:js",
         "build:types": "tsc --emitDeclarationOnly",
         "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps false --presets minify",
-        "build:js:sourcemap": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline"
+        "build:js:sourcemap": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
+        "test": "cross-env NODE_PATH=. ts-mocha test/test.ts --timeout=60000 --exit"
     }
 }

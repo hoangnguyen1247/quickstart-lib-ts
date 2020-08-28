@@ -1,8 +1,9 @@
 import { test } from "src/utils/test-utils";
 
-function libMain() {
+const libMain = async() => {
     let str = "world";
     console.log(`Hello ${str}`);
+    return 1;
 } 
 
 export {
