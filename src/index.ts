@@ -1,7 +1,7 @@
 import { test } from "src/utils/test-utils";
 
-function createServer() {
-
+function libMain() {
+    console.log("Hello world");
 } 
 
-export default createServer;
+export default libMain;

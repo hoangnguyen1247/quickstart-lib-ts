@@ -2,7 +2,7 @@
     "name": "quickstart-lib-ts",
     "version": "0.0.1",
     "description": "Quickstart lib ts",
-    "main": "lib/index.js",
+    "main": "index.js",
     "license": "MIT",
     "dependencies": {},
     "devDependencies": {
@@ -24,6 +24,7 @@
         "type-check:watch": "npm run type-check -- --watch",
         "build": "cross-env NODE_PATH=. npm run build:types && npm run build:js",
         "build:types": "tsc --emitDeclarationOnly",
-        "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline"
+        "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps false",
+        "build:js:sourcemap": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline"
     }
 }

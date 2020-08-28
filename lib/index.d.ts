@@ -1,2 +1,2 @@
-declare function createServer(): void;
-export default createServer;
+declare function libMain(): void;
+export default libMain;
