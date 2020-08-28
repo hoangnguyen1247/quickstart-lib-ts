@@ -4,4 +4,6 @@ function libMain() {
     console.log("Hello world");
 } 
 
-export default libMain;
+export {
+    libMain
+};
