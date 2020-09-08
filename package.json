@@ -21,6 +21,7 @@
         "chai-as-promised": "^7.1.1",
         "cross-env": "^7.0.2",
         "gts": "^2.0.2",
+        "husky": "^4.3.0",
         "mocha": "^8.1.2",
         "prettier": "^2.1.1",
         "rimraf": "^3.0.2",
@@ -45,5 +46,10 @@
     },
     "engines": {
         "node": ">=10"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run type-check"
+        }
     }
 }
