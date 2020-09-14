@@ -8,10 +8,8 @@ module.exports = {
         "@babel/preset-env",
     ],
     "plugins": [
-        "@babel/proposal-class-properties",
-        "@babel/proposal-object-rest-spread",
         "@babel/plugin-transform-runtime",
-        ["module-resolver", {
+        ["babel-plugin-module-resolver", {
             "root": ["."],
             "extensions": [".js", ".ts", ".tsx", ".json"],
             "alias": {

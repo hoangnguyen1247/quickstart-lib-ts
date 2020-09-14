@@ -1,4 +1,3 @@
-import "reflect-metadata";
 import { test } from "src/utils/test-utils";
 
 const testDirect = async () => {
