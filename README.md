@@ -1,1 +1,7 @@
-Nodejs Console quickstart
+# Nodejs Console quickstart 
+
+## Build 
+
+```shell
+npm run build
+```
