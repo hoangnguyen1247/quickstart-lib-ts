@@ -4,8 +4,8 @@ module.exports = {
         "build"
     ],
     "presets": [
+        "@babel/preset-typescript",
         "@babel/preset-env",
-        "@babel/preset-typescript"
     ],
     "plugins": [
         "@babel/proposal-class-properties",
@@ -13,12 +13,7 @@ module.exports = {
         "@babel/plugin-transform-runtime",
         ["module-resolver", {
             "root": ["."],
-            "extensions": [
-                ".js",
-                ".ts",
-                ".tsx",
-                ".json"
-            ],
+            "extensions": [".js", ".ts", ".tsx", ".json"],
             "alias": {
                 "src": ["./src/"],
                 "server": ["./server/"]
