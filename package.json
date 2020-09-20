@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "description": "Quickstart lib ts",
     "main": "index.js",
+    "module": "es/index.js",
     "types": "lib/index.d.ts",
     "license": "MIT",
     "author": "Hoàng Ng.",
