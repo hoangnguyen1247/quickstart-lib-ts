@@ -18,5 +18,26 @@ module.exports = {
             }
         }]
     ],
-    "sourceMaps": "inline"
+    "sourceMaps": "inline",
+    "env": {
+        "esm": {
+            "presets": [ // order: last to first
+                [
+                    "@babel/env",
+                    {
+                        "loose": true,
+                        "shippedProposals": true,
+                        "modules": false,
+                        "targets": {
+                            "ie": 9
+                        }
+                    }
+                ],
+                "@babel/preset-typescript",
+            ],
+            "plugins": [ // order: first to last
+                [ "@babel/plugin-transform-runtime", { "useESModules": true }]
+            ]
+        }
+    }
 }
