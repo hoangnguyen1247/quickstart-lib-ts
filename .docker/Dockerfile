@@ -18,4 +18,4 @@ RUN npm install
 COPY . .
 
 # EXPOSE 8080
-# CMD [ "node", "main.ts" ]
+CMD [ "npm", "run", "start:debug" ]

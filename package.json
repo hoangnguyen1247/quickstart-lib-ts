@@ -43,7 +43,7 @@
     },
     "scripts": {
         "clean:build": "rimraf lib",
-        "start:debug": "cross-env NODE_PATH=. nodemon --watch 'src/**/*.ts' --watch 'src/**/*.jsx' --ignore 'src/**/*.spec.ts' --exec node --inspect=127.0.0.1:9229 -r ts-node/register main.ts",
+        "start:debug": "cross-env NODE_PATH=. nodemon --watch 'src/**/*.ts' --watch 'src/**/*.jsx' --ignore 'src/**/*.spec.ts' --exec node --inspect=0.0.0.0:9229 -r ts-node/register main.ts",
         "start": "cross-env NODE_PATH=. node -r ts-node/register main.ts",
         "type-check": "cross-env NODE_PATH=. tsc --noEmit",
         "type-check:watch": "npm run type-check -- --watch",
