@@ -1,0 +1,33 @@
+[Unit]
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+ExecStart=/usr/local/bin/<MY_GO_APP>
+WorkingDirectory=/home/user/<MY_GO_APP_HOME_DIR>
+User=<MY_GO_APP_USER>
+Restart=always
+RestartSec=5
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=%n
+
+# Create this file as /etc/systemd/system/my_app.service, then run:
+# systemctl start my_app.service
+
+# Usual Operations
+# To have it always on when the machine starts:
+
+# systemctl enable my_app.service
+# If you change your unit file after the first start or enable, you need to run:
+
+# systemctl daemon-reload
+# To see the status of the process, run:
+
+# systemctl status my_app.service
+# To see the STDOUT of the process, run:
+
+# journalctl -f -u my_app.service
+
+# https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files
