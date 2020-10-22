@@ -5,7 +5,7 @@ services:
         image: quickstart_lib_ts
         build:
             context: .
-            dockerfile: ./.docker/Dockerfile
+            dockerfile: ./.docker/Dockerfile-dev
         environment:
             NODE_PATH: .
             NODE_ENV: development
