@@ -15,7 +15,8 @@
         "url": "https://github.com/hoangnguyen1247/quickstart-lib-ts/issues"
     },
     "dependencies": {
-        "@babel/runtime": "^7.11.2"
+        "@babel/runtime": "^7.11.2",
+        "dotenv": "^8.2.0"
     },
     "devDependencies": {
         "@babel/cli": "^7.10.3",
