@@ -57,7 +57,7 @@
         "type-check": "cross-env NODE_PATH=. tsc --noEmit",
         "type-check:watch": "npm run type-check -- --watch",
         "lint": "cross-env NODE_ENV=development eslint . --cache --ext .js,.jsx,.ts,.tsx",
-        "lint-fix": "yarn --silent lint --fix; exit 0",
+        "lint-fix": "yarn --silent lint --fix",
         "lint-styles": "stylelint --ignore-path .eslintignore '**/*.*(css|scss)' --syntax scss",
         "lint-styles-fix": "yarn --silent lint-styles --fix; exit 0",
         "build": "npm run clean:build && npm run type-check && npm run build:types && npm run build:cjs && npm run build:esm",

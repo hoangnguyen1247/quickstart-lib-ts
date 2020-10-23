@@ -21,3 +21,5 @@ src/**/*.js.map
 
 yarn.lock
 yarn-error.log
+
+.eslintcache
