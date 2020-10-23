@@ -14,5 +14,5 @@ app.get("/", (req, res) => {
 const PORT = +process.env.PORT || 8080;
 app.listen(PORT, "0.0.0.0", () => {
     test();
-    console.log("Server started in: " + PORT);
+    console.log("Server started in: " + PORT.toString());
 });
