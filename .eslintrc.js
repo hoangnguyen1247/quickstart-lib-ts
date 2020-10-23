@@ -10,6 +10,6 @@ module.exports = {
         "@typescript-eslint/semi": ["error", "always"],
         quotes: ["error", "double"],
         "@typescript-eslint/quotes": ["error", "double"],
-        "no-redeclare": ["error", { builtinGlobals: false }],
+        "no-redeclare": ["error", { builtinGlobals: false }]
     }
 };
