@@ -26,16 +26,25 @@
         "@types/chai": "^4.2.11",
         "@types/mocha": "^7.0.2",
         "@types/node": "^12.7.4",
+        "@typescript-eslint/eslint-plugin": "^3.10.1",
         "babel-plugin-module-resolver": "^4.0.0",
         "babel-preset-minify": "^0.5.1",
         "chai": "^4.2.0",
         "chai-as-promised": "^7.1.1",
         "cross-env": "^7.0.2",
+        "eslint": "^7.11.0",
+        "eslint-config-standard-with-typescript": "^19.0.1",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-standard": "^4.0.2",
         "express": "^4.17.1",
         "gts": "^2.0.2",
         "husky": "^4.3.0",
+        "lint-staged": "^10.4.2",
         "mocha": "^8.1.2",
         "nodemon": "^2.0.4",
+        "prettier": "^2.1.2",
         "rimraf": "^3.0.2",
         "ts-mocha": "^7.0.0",
         "ts-node": "^9.0.0",
@@ -47,6 +56,8 @@
         "start": "cross-env NODE_PATH=. node -r ts-node/register main.ts",
         "type-check": "cross-env NODE_PATH=. tsc --noEmit",
         "type-check:watch": "npm run type-check -- --watch",
+        "lint": "cross-env NODE_ENV=development eslint . --cache --ext .js,.jsx,.ts,.tsx",
+        "lint-fix": "yarn --silent lint --fix; exit 0",
         "build": "npm run clean:build && npm run type-check && npm run build:types && npm run build:cjs && npm run build:esm",
         "build:types": "tsc --emitDeclarationOnly --outFile lib/index.d.ts --project tsconfig.types.json",
         "build:cjs": "cross-env babel src --out-dir lib --extensions \".ts,.tsx\" --ignore '**/*.test.ts' --source-maps false",
@@ -55,6 +66,21 @@
         "build:js:sourcemap": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
         "test:mocha": "cross-env NODE_PATH=. ts-mocha test/test.ts --timeout=60000 --exit",
         "test": "npm run type-check && npm run test:mocha"
+    },
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx}": [
+            "cross-env NODE_ENV=development eslint --cache"
+        ],
+        "{*.json,.{babelrc,eslintrc,prettierrc,stylelintrc}}": [
+            "prettier --ignore-path .eslintignore --parser json --write"
+        ],
+        "*.{css,scss}": [
+            "stylelint --ignore-path .eslintignore --syntax scss --fix",
+            "prettier --ignore-path .eslintignore --single-quote --write"
+        ],
+        "*.{html,md,yml}": [
+            "prettier --ignore-path .eslintignore --single-quote --write"
+        ]
     },
     "engines": {
         "node": ">=10"
