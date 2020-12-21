@@ -1,4 +1,4 @@
-import { performance } from 'perf_hooks';
+import { performance } from "perf_hooks";
 
 export function measureFunctionExecuteTime(fn, ...args) {
     const t0 = performance.now();

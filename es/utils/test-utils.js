@@ -1,4 +1,4 @@
 export function test() {
-  console.log("Hello from test");
+    console.log("Hello from test");
 }
 //# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy91dGlscy90ZXN0LXV0aWxzLnRzIl0sIm5hbWVzIjpbInRlc3QiLCJjb25zb2xlIiwibG9nIl0sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLFNBQVNBLElBQVQsR0FBZ0I7QUFDbkJDLEVBQUFBLE9BQU8sQ0FBQ0MsR0FBUixDQUFZLGlCQUFaO0FBQ0giLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZnVuY3Rpb24gdGVzdCgpIHtcbiAgICBjb25zb2xlLmxvZyhcIkhlbGxvIGZyb20gdGVzdFwiKTtcbn1cbiJdfQ==

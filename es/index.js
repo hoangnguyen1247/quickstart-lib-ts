@@ -3,27 +3,27 @@ import _asyncToGenerator from "@babel/runtime/helpers/esm/asyncToGenerator";
 import { test } from "./utils/test-utils";
 
 var testDirect = /*#__PURE__*/function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee() {
-    var str;
-    return _regeneratorRuntime.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            str = 'world';
-            console.log("Hello " + str);
-            return _context.abrupt("return", 1);
+    var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee() {
+        var str;
+        return _regeneratorRuntime.wrap(function _callee$(_context) {
+            while (1) {
+                switch (_context.prev = _context.next) {
+                    case 0:
+                        str = "world";
+                        console.log("Hello " + str);
+                        return _context.abrupt("return", 1);
 
-          case 3:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  }));
+                    case 3:
+                    case "end":
+                        return _context.stop();
+                }
+            }
+        }, _callee);
+    }));
 
-  return function testDirect() {
-    return _ref.apply(this, arguments);
-  };
+    return function testDirect() {
+        return _ref.apply(this, arguments);
+    };
 }();
 
 export { testDirect, test };
